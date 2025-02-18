@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
+    <style>
+        /* General Styles */
+        body {
+            font-family: "Sour Gummy", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fef6db; 
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #013220; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo img {
+            width: 177px;
+            height: 100px;
+            margin-right: 0.5rem;
+        }
+
+        nav .logo span {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('HeroCover.png');
+            background-size: cover;
+            background-color: #61540b;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #013220; /* Dark green for contrast */
+            background-color: #fff; /* White background box */
+            padding: 1rem 2rem;
+            display: inline-block;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero p {
+            max-width: 1000px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #ffffff;
+            font-size: 120%;
+        }
+
+        .hero p2 {
+            max-width: 1000px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #ffffff;
+            font-style: italic;
+            font-size: 130%;
+        }
+
+        .hero h1:hover {
+        transform: scale(1.15) rotate(1deg); 
+        transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); 
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+        background-color: rgb(50, 206, 206);
+            }
+
+        .hero video {
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 16 / 9;
+            border-radius: 25px;
+        }
+
+        .anim{
+            opacity: 0;
+            transform: translateY(30px);
+            animation: moveup 0.5s linear forwards;
+        }
+        @keyframes moveup{
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+
+        /* Upcoming Events */
+        .events {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .events h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .event-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .event-card {
+            background-color: #fff7d5; 
+            border: 1px solid #ffd700;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .event-card:hover {
+         transform: scale(1.05); /* Slight but noticeable scale increase */
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Elevated shadow for effect */
+}
+        .event-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .event-card p {
+            line-height: 1.6;
+        }
+
+        .event-card span {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #013220;
+            color: #fff;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="Logo.png" alt="Outreach Logo">
+            <span>Tulong Marista</span>
+        </div>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Programs.html">Programs</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Donation.html">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1 class="anim">Mga Kamay ng Pag-asa: Gabay sa Landas ng mga Ulila</h1>
+        <br>
+        <p class="anim">Welcome to our project, a collaborative effort by Group 2 of 9 - St. Luke. We are dedicated to supporting the orphans of the Meritxell community residing at 24 Peach St. Marikina. Our program goes beyond simple donations, focusing on sustainable assistance through a series of planned activities.</p>
+        <br>
+        <p2 class="anim"> "Isaiah 1:17 Learn to do good; seek justice, correct oppression; bring justice to the fatherless, plead the widow's cause"</p>
+        <video autoplay loop controls muted class="anim">
+            <source src="Meritxell Video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    
+
+    <!-- Upcoming Events -->
+    <section class="events">
+        <h2>Timeline of Events</h2>
+        <div class="event-cards">
+            <div class="event-card">
+                <h3>Collection of Funds </h3>
+                <span><strong>Date:</strong> First Month of January</span>
+                <span><strong>Location:</strong> 9 St. Luke Classroom </span>
+                <p>Collection of funds to be used in the outreach along with assigning of roles.</p>
+            </div>
+            <div class="event-card">
+                <h3>Preperation and Planning</h3>
+                <span><strong>Date:</strong> 1st - 2nd week of February</span>
+                <span><strong>Location:</strong> Ayala Malls Marakina </span>
+                <p>Preperation and Buying of materials and donations to be used along with the planning of the program.</p>
+            </div>
+            <div class="event-card">
+                <h3>Day of Outreach</h3>
+                <span><strong>Date:</strong> February 14, 2024</span>
+                <span><strong>Location:</strong> Meritxell Children's Home </span>
+                <p>Main day of the Outreach. Activites along with donation drive will all be done on this day.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Group 2 Community Outreach. All rights reserved.
+    </footer>
+</body>
+</html>

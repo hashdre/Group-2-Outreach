@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+    <style>
+        /* General Styles */
+        body {
+            font-family: "Sour Gummy", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fef6db; /* Light yellow */
+            color: #333; /* Complementary dark gray */
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #013220; /* Dark green */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo img {
+            width: 177px;
+            height: 100px;
+            margin-right: 0.5rem;
+        }
+
+        nav .logo span {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Box Styling */
+        .boxed-section {
+            background-color: #fff7d5; /* Light yellow box */
+            border: 2px solid #ffd700; /* Yellow border */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            max-width: 1200px; /* Set a maximum width */
+            text-align: center; /* Center align content */
+        }
+
+        /* About Section */
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #013220; /* Dark green */
+        }
+
+        .about-content p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #333;
+            text-align: justify; /* Ensure the paragraph is readable */
+            max-width: 100%; /* Ensure no clipping */
+            text-align:center;
+        }
+
+        /* Meet Our Team Section */
+        .team h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #013220; /* Dark green */
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 2rem; /* Space between team members */
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            text-align: center;
+            width: 160px; /* Slightly larger for better alignment */
+        }
+
+        .team-member .avatar {
+            width: 120px; /* Increased size of the avatar */
+            height: 120px;
+            border-radius: 50%; /* Circular shape */
+            overflow: hidden; /* Ensure the image fits within the circular shape */
+            margin: 0 auto 0.5rem; /* Center the avatar and add space below */
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .team-member .avatar img {
+            width: 100%; /* Scale image to fit the avatar container */
+            height: 100%;
+            object-fit: cover; /* Maintain proper aspect ratio */
+        }
+
+        .team-member .avatar:hover {
+         transform: scale(1.15); 
+         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+        }
+
+        .team-member span {
+            display: block;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            color: #333;
+        }
+
+        .anim{
+            opacity: 0;
+            transform: translateY(30px);
+            animation: moveup 0.5s linear forwards;
+        }
+        @keyframes moveup{
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #013220; /* Dark green */
+            color: #fff;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="Logo.png" alt="Outreach Logo">
+            <span>Tulong Marista</span>
+        </div>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Programs.html">Programs</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Donation.html">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about boxed-section">
+        <div class="about-content">
+            <h2 class="anim">About the Project</h2>
+            <p class="anim">Our project, "Mga Kamay ng Pag-asa: Gabay sa Landas ng mga Ulila" is an outreach initiative by Group 2 aimed at supporting the Meritxell Children’s Home in Marikina City, a foundation established in 2008 to provide a safe, loving environment for abandoned, orphaned, and abused girls aged 0-15. Driven by compassion and a shared sense of purpose, we’ve designed activities focused on fun, education, and emotional well-being. These include interactive games and discussions centered on Good Manners and Right Conduct (GMRC), fostering values that help the children navigate daily life. The project also includes distributing much-needed supplies like clothing, school materials, and toys, collected through donations and class contributions. By ensuring sustainability, such as consistent community engagement and fostering emotional growth, we aim to make a lasting impact, instilling hope and positivity in the lives of these children. Our efforts are a collective testament to empathy, teamwork, and the transformative power of outreach.</p>
+        </div>
+    </section>
+
+    <!-- Meet Our Team Section -->
+    <section class="team boxed-section">
+        <h2 class="anim">Meet Our Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="Jacob.jpg" class="anim" alt="Team Member 1">
+                </div>
+                <span class="anim">Jacob Copaway</span>
+            </div>
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="Kyle.jpg" class="anim" alt="Team Member 2">
+                </div>
+                <span class="anim">Kyle Cruz</span>
+            </div>
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="Liam.jpg" class="anim" alt="Team Member 3">
+                </div>
+                <span class="anim">Liam Javelona</span>
+            </div>
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="Drake.jpg" class="anim" alt="Team Member 4">
+                </div>
+                <span class="anim">Adriyel Millar</span>
+            </div>
+            <div class="team-member">
+                <div class="avatar">
+                    <img src="JM.jpg" class="anim" alt="Team Member 5">
+                </div>
+                <span class="anim">John Torio</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Group 2 Community Outreach. All rights reserved.
+    </footer>
+</body>
+</html>
